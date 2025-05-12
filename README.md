@@ -1,20 +1,16 @@
-## Racoin
+# Racoin v2 — Exercice refactoring
 
-Racoin est une application de vente en ligne entre particulier.
+## 1 - Mise en place de tests
+Mise en place de PHPUnit et ajout de tests unitaires de base (`ArticleTest`).
 
-## Installation
-Les commandes suivantes permettent d'installer les dépendances et de construire les fichiers statiques nécessaires au bon fonctionnement de l'application.
-```bash
-cp config/config.ini.dist config/config.ini
-docker compose run --rm php composer install
-docker compose run --rm php php sql/initdb.php
-docker compose run node npm install
-docker compose run node npm run build
+## 2 - Architecture
+Réorganisation du projet selon une structure PSR-4 (`src/Controller`, `src/Model`, etc.).
 
-```
+## 3 - Mise à jour des packages
+Migration vers Slim 4 avec DI-container. Configuration de base dans `index.php` et `web.php`.
 
-## Utilisation
-Pour lancer l'application, il suffit de lancer la commande suivante:
-```bash
-docker compose up
-```
+## 4 - Amélioration du code
+Application partielle des standards PHP 8 avec Rector (type hinting, strict types, etc.).
+
+## 5 - Réfactorisation
+Début de la migration des anciens fichiers vers des contrôleurs modernes. Intégration d’un contrôleur `AnnonceController` relié à la base de données.

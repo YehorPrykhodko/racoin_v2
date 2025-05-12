@@ -8,15 +8,21 @@
         "ext-pdo": "*"
     },
     "autoload":{
-        "psr-0":{
-            "controller":"",
-            "model":"",
-            "db":""
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "config": {
         "allow-plugins": {
             "kylekatarnls/update-helper": true
         }
+    },
+    "require-dev": {
+        "rector/rector": "^2.0"
     }
 }
